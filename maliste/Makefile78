@@ -1,0 +1,7 @@
+sources = maliste.c main.c animaux.c
+headers = maliste.h animaux.h
+objets = $(sources:.c=.o)
+Animalerie: $(objets)
+  gcc -o $@ $^
+maliste.o: maliste.c
+	main.o main.c
